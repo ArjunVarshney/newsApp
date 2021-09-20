@@ -1,11 +1,8 @@
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import React, { Component } from 'react'
 
-export default class App extends Component {
-  pageSize=18;
-  render(){
+function App() {
   return (
     <div>
       <Router>
@@ -13,30 +10,31 @@ export default class App extends Component {
         <div className="container">
           <Switch>
             <Route exact path="/business">
-              <News key="business" pageSize={this.pageSize} category="business" country="in" />
+              <News key="business" pageSize={18} category="business" country="in" />
             </Route>
             <Route exact path="/entertainment">
-              <News key="entertainment" pageSize={this.pageSize} category="entertainment" country="in" />
+              <News key="entertainment" pageSize={18} category="entertainment" country="in" />
             </Route>
             <Route exact path="/">
-              <News key="general" pageSize={this.pageSize} category="general" country="in" />
+              <News key="general" pageSize={18} category="general" country="in" />
             </Route>
             <Route exact path="/health">
-              <News key="health" pageSize={this.pageSize} category="health" country="in" />
+              <News key="health" pageSize={18} category="health" country="in" />
             </Route>
             <Route exact path="/science">
-              <News key="science" pageSize={this.pageSize} category="science" country="in" />
+              <News key="science" pageSize={18} category="science" country="in" />
             </Route>
             <Route exact path="/sports">
-              <News key="sports" pageSize={this.pageSize} category="sports" country="in" />
+              <News key="sports" pageSize={18} category="sports" country="in" />
             </Route>
             <Route exact path="/technology">
-              <News key="technology" pageSize={this.pageSize} category="technology" country="in" />
+              <News key="technology" pageSize={18} category="technology" country="in" />
             </Route>
           </Switch>
         </div>
       </Router>
     </div>
   );
-  }
 }
+
+export default App;
